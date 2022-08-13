@@ -79,8 +79,7 @@ while not soru_kelimesi_listesi == current_listesi:
     harf_alma_fonksiyonu(x, current_listesi)
     hata_sayacı(x)
     if hata_sayısı ==  9:
-        print("Oyun bitti, Zortladın")
-        print("Kesbiş olsun")
+        print("Oyun bitti, Kaybettin")
         print(f'{soru_kelimesi,"was the right answer"}')
         break
 

@@ -1,4 +1,5 @@
 #### HANGMAN GAME ####
+
 import random as rand
 
 # Rastgele kelimele listesi
@@ -27,6 +28,7 @@ adam_asma_listesi = [
 current_listesi = []
 soru_kelimesi_listesi = []
 
+#### Fonksiyonlar
 
 def soru_kelimesini_liste_yapan_f(a):
     for i in a:
@@ -45,13 +47,12 @@ def durum_listesini_string_yapan_f(y):
     print(" ")
 
 
-hata_sayısı = 0
 def adam_asma_f():
     adam_asma_listesi
     for i in range(hata_sayısı):
         print(adam_asma_listesi[i])
 
-
+hata_sayısı = 0
 def hata_sayacı(x):
     global hata_sayısı
     if not x in soru_kelimesi:
@@ -63,7 +64,8 @@ def harf_alma_fonksiyonu(x, liste):   #liste current list olmalı
         if  soru_kelimesi[i] == x:
             liste[i] = x
 
-########################################################################################################################
+            
+#### Hangman Game ####
 
 baslangıc_durum_listesi_olusturma_f(soru_kelimesi)
 input_sayısı = 0
@@ -88,35 +90,4 @@ while not soru_kelimesi_listesi == current_listesi:
 
     print("Esirin durumu")
     adam_asma_f()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

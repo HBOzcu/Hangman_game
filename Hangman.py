@@ -34,18 +34,15 @@ def soru_kelimesini_liste_yapan_f(a):
     for i in a:
         soru_kelimesi_listesi.append(i)
 
-
 def baslangıc_durum_listesi_olusturma_f(x):   # Soru kelimesi olacak
     for i in range(len(x)):
         current_listesi.append("-")
-
 
 def durum_listesini_string_yapan_f(y):
     print("kelimeniz;")
     for i in range(len(y)):
         print(y[i],end ="")
     print(" ")
-
 
 def adam_asma_f():
     adam_asma_listesi
@@ -58,7 +55,6 @@ def hata_sayacı(x):
     if not x in soru_kelimesi:
         hata_sayısı = hata_sayısı + 1
 
-
 def harf_alma_fonksiyonu(x, liste):   #liste current list olmalı
     for i in range(len(soru_kelimesi)):
         if  soru_kelimesi[i] == x:
@@ -68,7 +64,7 @@ def harf_alma_fonksiyonu(x, liste):   #liste current list olmalı
 #### Hangman Game ####
 
 baslangıc_durum_listesi_olusturma_f(soru_kelimesi)
-input_sayısı = 0
+input_sayısı = 0 
 soru_kelimesini_liste_yapan_f(soru_kelimesi)
 
 while not soru_kelimesi_listesi == current_listesi:
@@ -78,6 +74,7 @@ while not soru_kelimesi_listesi == current_listesi:
     x = str(input("lütfen_harf_girin"))
     harf_alma_fonksiyonu(x, current_listesi)
     hata_sayacı(x)
+    
     if hata_sayısı ==  9:
         print("Oyun bitti, Kaybettin")
         print(f'{soru_kelimesi,"was the right answer"}')
@@ -89,4 +86,4 @@ while not soru_kelimesi_listesi == current_listesi:
 
     print("Esirin durumu")
     adam_asma_f()
-
+    
